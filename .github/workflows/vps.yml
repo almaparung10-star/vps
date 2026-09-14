@@ -21,13 +21,6 @@ jobs:
           export PATH="$HOME/.opencode/bin:$PATH"
           opencode --version
 
-      - name: Install Hermes
-        run: |
-          curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
-          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
-          export PATH="$HOME/.local/bin:$PATH"
-          hermes --version
-
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
